@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
@@ -23,7 +24,7 @@ body {
 header {
     height: 90px;
     min-height: 90px;
-    background-color: var(--t-blue);
+    background-color: var(--t-yellow);
     padding: 0 20px;
 }
 
@@ -95,11 +96,11 @@ main>div:nth-child(2) {
 
 #grid>*.rook>* {
     /**/
-    transform: scale(0.3);
+    transform: scale(0.5);
 }
 
 #grid>*.piece>* {
-    transform: scale(0.3);
+    transform: scale(0.5);
 }
 
 #grid>*.piece-pawn>* {
