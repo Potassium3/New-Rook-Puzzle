@@ -18,9 +18,24 @@ function makePuzzle() {
         } else {
             let piecetype = ["pawn", "bishop", "knight", "rook", "queen"][Math.floor(Math.random()*5)];    
             grid.innerHTML += `
-            <div class="piece piece-${piecetype}" style="top:${thing[0]/size*100}%; left:${thing[1]/size*100}%; width:${100/size}%;"><div></div></div>
+            <div class="piece piece-${piecetype}" style="top:${thing[0]/size*100}%; left:${thing[1]/size*100}%; width:${100/size}%;"><div></div><button class="button-grid" id="sq-${thing[0]}-${thing[1]}"></button></div>
             `
         }
         firstPiece = false;
     }
+
+    // Add event listeners to grid squares
+    grid.addEventListener("click", function(event) {
+        // Check if the clicked element is a button with class 'button-grid'
+        if (event.target && event.target.matches("button.button-grid")) {
+            eventClickSquare();
+            console.log(`Button clicked: ${event.target.id}`);
+        }
+    });
+}
+
+// Events
+
+function eventClickSquare() {
+    console.log("I am clicked.")
 }
